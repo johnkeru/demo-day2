@@ -1,9 +1,11 @@
-const Post = require('../post')
+const Post = require('../models/post')
+const User = require('../models/user')
 
 exports.getPosts = async (req, res) => {
     try {
+        const user = await User.findById(req.session.userId)
         const posts = await Post.find()
-        res.render('posts', { posts })
+        res.render('posts', { posts, user })
     } catch (error) {
         res.status(500).json({ message: 'Something went wrong!' })
     }

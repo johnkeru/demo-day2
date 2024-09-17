@@ -1,3 +1,20 @@
+.auth {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth a {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    background-color: rgb(146, 146, 146);
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
 .posts {
     width: 60%;
     margin: auto;
