@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/posts.css">
+    <link rel="stylesheet" href="/global.css">
+</head>
+
+<body>
+    <div class="posts">
+        <h1>Posts</h1>
+        <div class="post">
+            <% if(posts.length !==0) { %>
+                <% posts.forEach(post=> { %>
+                    <h2>
+                        <%=post.title%>
+                    </h2>
+                    <p class="description">
+                        <%=post.description%>
+                    </p>
+                    <p>
+                        <b>Date Posted:</b>
+                        <%=post.createdAt.toLocaleString()%>
+                    </p>
+
+                    <div class="action-buttons">
+                        <button class="update-btn">Update</button>
+                        <form method="post" action="/posts/<%=post._id %>?_method=DELETE">
+                            <button class="delete-btn">Delete</button>
+                        </form>
+                    </div>
+                    <% }) %>
+                        <% } else { %>
+                            <p>No posts available.</p>
+                            <% } %>
+        </div>
+    </div>
+</body>
+
+</html>

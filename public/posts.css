@@ -1,0 +1,43 @@
+.posts {
+    width: 60%;
+    margin: auto;
+    background: rgb(177, 218, 232);
+    padding: 30px;
+}
+
+.posts h1 {
+    margin-bottom: 20px;
+}
+
+.description {
+    margin: 10px 0;
+}
+
+.post {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.action-buttons button {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.update-btn {
+    background-color: lightskyblue;
+}
+
+.delete-btn {
+    background-color: red;
+}
