@@ -21,7 +21,13 @@ exports.getPost = async (req, res) => {
 }
 
 exports.dispayPostPage = (req, res) => {
-    render('create-post')
+    res.render('create-post')
+}
+
+exports.displayPostUpdatePage = async (req, res) => {
+    const id = req.params.id
+    const post = await Post.findById(id)
+    res.render('update-post', { post })
 }
 
 exports.createPost = async (req, res) => {
