@@ -32,7 +32,7 @@
                     </p>
 
                     <div class="action-buttons">
-                        <button class="update-btn">Update</button>
+                        <a href="/update-post-page/<%=post._id %>" class="update-btn">Update</a>
                         <form method="post" action="/posts/<%=post._id %>?_method=DELETE">
                             <button class="delete-btn">Delete</button>
                         </form>

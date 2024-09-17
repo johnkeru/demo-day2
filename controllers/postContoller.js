@@ -45,9 +45,10 @@ exports.updatePost = async (req, res) => {
     try {
         const id = req.params.id
         const body = req.body
-        await Post.findOneAndUpdate(id, body)
-        res.json({ message: 'Post is updated' })
+        await Post.findOneAndUpdate({ _id: id }, body)
+        res.redirect('/posts')
     } catch (error) {
+        console.log(error)
         res.status(500).json({ message: 'Something went wrong!' })
     }
 }
